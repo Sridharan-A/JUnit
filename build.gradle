@@ -1,0 +1,33 @@
+import jdk.internal.dynalink.linker.LinkerServices
+
+plugins{
+    id 'java'
+    id 'application'
+}
+mainClassName = 'org.junit.JunitPractice'
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'org.junit.JunitPractice'
+        )
+    }
+}
+sourceCompatibility=1.8
+targetCompatibility=1.8
+repositories{
+    mavenCentral()
+}
+
+test {
+    reports {
+        junitXml.enabled = true
+        html.enabled = true
+    }
+}
+
+dependencies {
+// https://mvnrepository.com/artifact/junit/junit
+    testImplementation 'junit:junit:4.13.2'
+
+
+}
