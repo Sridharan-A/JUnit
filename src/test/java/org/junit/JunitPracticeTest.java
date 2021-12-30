@@ -22,7 +22,7 @@ public class JunitPracticeTest {
 
     @Test(expected = InvalidParameterException.class)
     public void testBmiReturnExceptionFromZeroValue() {
-        b.calculate(0,0);
+        b.calculate(0, 0);
     }
 
     @Test
